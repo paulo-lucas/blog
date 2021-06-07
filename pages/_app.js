@@ -1,7 +1,24 @@
-import '../styles/globals.css'
+import Head from 'next/head'
 
-function MyApp({ Component, pageProps }) {
-  return <Component {...pageProps} />
+import '../styles/globals.css'
+import styled from 'styled-components'
+import { colors } from '../constants/theme'
+
+function App({ Component, pageProps }) {
+  return <Container>
+    <Head>
+      <link rel="icon" href="/favicon.ico" />
+    </Head>
+    <Component {...pageProps} />
+  </Container>
 }
 
-export default MyApp
+const Container = styled.div`
+  background-color: ${colors.dark};
+  width: 100vw;
+  max-width: 1440px;
+  min-height: 100vh;
+  margin: auto;
+`
+
+export default App
