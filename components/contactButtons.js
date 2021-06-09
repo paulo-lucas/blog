@@ -14,25 +14,25 @@ function ContactButtons({ size }) {
     </li>
 
     <li>
-      <a href="">
+      <a href="https://github.com/paulo-lucas">
         <FaGithub color="white" size={buttonSize} />
       </a>
     </li>
 
     <li>
-      <a href="">
+      <a href="https://twitter.com/plucasdev">
         <FaTwitter color="white" size={buttonSize} />
       </a>
     </li>
 
     <li>
-      <a href="">
+      <a href="https://www.instagram.com/paulo_lucasoc">
         <FaInstagram color="white" size={buttonSize} />
       </a>
     </li>
 
     <li>
-      <a href="">
+      <a href="https://www.linkedin.com/in/paulo-lucas-cerqueira/">
         <FaLinkedin color="white" size={buttonSize} />
       </a>
     </li>
