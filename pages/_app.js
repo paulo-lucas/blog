@@ -19,6 +19,7 @@ const Container = styled.div`
   max-width: 1440px;
   min-height: 100vh;
   margin: auto;
+  padding: 10vh 10%;
 
   * {
     color: white;
