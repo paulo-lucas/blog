@@ -24,6 +24,10 @@ const Container = styled.div`
   * {
     color: white;
   }
+
+  @media(max-width: 800px) {
+    padding: 10vh 5%;
+  }
 `
 
 export default App

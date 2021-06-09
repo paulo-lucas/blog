@@ -35,8 +35,7 @@ const Header = styled.header`
     font-size: 24px;
     line-height: 28px;
     margin-top: 20px;
-    max-width: 100%;
-    min-width: 50%;
+    max-width: 60%;
   }
 
   @media(max-width: 800px) {
@@ -49,6 +48,7 @@ const Header = styled.header`
       font-weight: 300;
       font-size: 18px;
       line-height: 21px;
+      max-width: none;
     }
   }
 `
