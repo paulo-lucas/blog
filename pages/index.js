@@ -1,5 +1,5 @@
 import Head from 'next/head'
-
+import ContactButtons from '../components/contactButtons'
 import styled from 'styled-components'
 
 function Home() {
@@ -14,6 +14,7 @@ function Home() {
         <h1>Olá!</h1>
         <h1>Me chamo Paulo</h1>
         <p>e sou desenvolvedor tal stack, criei esse blog para compartilhar meus conhecimentos em programação e outros assuntos, espero que goste!</p>
+        <ContactButtons size={210}/>
       </Header>
     </div>
   )
@@ -34,7 +35,7 @@ const Header = styled.header`
     font-weight: 300;
     font-size: 24px;
     line-height: 28px;
-    margin-top: 20px;
+    margin: 20px 0;
     max-width: 60%;
   }
 
