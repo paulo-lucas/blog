@@ -1,5 +1,5 @@
 import Head from 'next/head'
-import ContactButtons from '../components/contactButtons'
+import ContactButtons from 'components/contactButtons'
 import styled from 'styled-components'
 
 function Home() {

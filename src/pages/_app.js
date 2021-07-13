@@ -1,7 +1,7 @@
 import Head from 'next/head'
 import styled, { ThemeProvider } from 'styled-components'
-import GlobalStyles from '../styles/globals'
-import * as theme from '../constants/theme'
+import GlobalStyles from 'styles/globals'
+import * as theme from 'constants/theme'
 
 function App({ Component, pageProps }) {
   return <>
