@@ -1,3 +1,3 @@
 export const colors = {
-  dark: '#111111'
+  secondary: '#111111'
 }
