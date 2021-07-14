@@ -21,7 +21,7 @@ function App({ Component, pageProps }) {
 }
 
 const Container = styled.div`
-  background-color: ${({ theme }) => theme.colors.secondary};
+  background-color: ${({ theme }) => theme.colors.dark};
   width: 100vw;
   max-width: 1440px;
   min-height: 100vh;
