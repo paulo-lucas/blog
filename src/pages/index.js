@@ -28,11 +28,11 @@ function Home({ tags }) {
 
 export async function getStaticProps() {
   await dbConnect()
-  const tags = await Tag.find()
+  const tags = await Tag.find({}, { _id: 0 }).lean()
 
   return {
     props: {
-      tags: JSON.stringify(tags)
+      tags
     }
   }
 }
