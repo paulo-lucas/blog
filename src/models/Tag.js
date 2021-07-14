@@ -6,7 +6,7 @@ const TagSchema = new mongoose.Schema({
     required: true,
     index: true
   },
-  image_url: {
+  image_path: {
     type: String
   }
 })

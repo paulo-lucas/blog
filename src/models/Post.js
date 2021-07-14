@@ -12,7 +12,7 @@ const PostSchema = new mongoose.Schema(
       index: true,
       unique: true
     },
-    banner_url: {
+    banner_path: {
       type: String
     },
     content: {

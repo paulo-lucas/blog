@@ -1,23 +1,40 @@
 import Head from 'next/head'
-import ContactButtons from 'components/ContactButtons'
 import styled from 'styled-components'
+import dbConnect from 'services/dbConnect'
+import Tag from 'models/Tag'
 
-function Home() {
+import Tags from 'components/Tags'
+import ContactButtons from 'components/ContactButtons'
+
+function Home({ tags }) {
   return (
     <div>
       <Head>
         <title>Home - Paulo Cerqueira</title>
         <meta name="description" content="Bio" />
       </Head>
-      
+
       <Header>
         <h1>Olá!</h1>
         <h1>Me chamo Paulo</h1>
         <p>e sou desenvolvedor tal stack, criei esse blog para compartilhar meus conhecimentos em programação e outros assuntos, espero que goste!</p>
-        <ContactButtons size={210}/>
+        <ContactButtons size={210} />
       </Header>
+
+      <Tags data={tags} />
     </div>
   )
+}
+
+export async function getStaticProps() {
+  await dbConnect()
+  const tags = await Tag.find()
+
+  return {
+    props: {
+      tags: JSON.stringify(tags)
+    }
+  }
 }
 
 const Header = styled.header`
