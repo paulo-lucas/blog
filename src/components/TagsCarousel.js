@@ -15,7 +15,7 @@ function Tags({ data }) {
         <EmblaContainer >
           {data.map(tag => (
             <EmblaSlide key={tag.name}>
-              <Link href="/" passHref>
+              <Link href={`/tag/${tag.alias}`} passHref>
                 <EmblaButton>
                   <EmblaSlideInner>
                     <Image

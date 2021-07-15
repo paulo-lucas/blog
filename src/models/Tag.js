@@ -8,6 +8,9 @@ const TagSchema = new mongoose.Schema({
   },
   image_path: {
     type: String
+  },
+  alias: {
+    type: String
   }
 })
 
