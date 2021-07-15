@@ -4,7 +4,7 @@ import styled from 'styled-components'
 import { useEmblaCarousel } from 'embla-carousel/react'
 
 function Tags({ data }) {
-  const [viewportRef, embla] = useEmblaCarousel({
+  const [viewportRef] = useEmblaCarousel({
     dragFree: true,
     containScroll: "trimSnaps"
   });
@@ -24,8 +24,8 @@ function Tags({ data }) {
                     />
                   </EmblaSlideInner>
                 </EmblaButton>
-                
-              </Link><ButtonTitle>{tag.name}</ButtonTitle>
+              </Link>
+              <ButtonTitle>{tag.name}</ButtonTitle>
             </EmblaSlide>
           ))}
         </EmblaContainer>
@@ -36,7 +36,6 @@ function Tags({ data }) {
 
 const Embla = styled.div`
   position: relative;
-  padding: 20px;
   width: 100%;
 `
 
@@ -60,7 +59,6 @@ const EmblaContainer = styled.div`
   -webkit-touch-callout: none;
   -khtml-user-select: none;
   -webkit-tap-highlight-color: transparent;
-  margin-left: -10px;
 `
 
 const EmblaSlide = styled.div`

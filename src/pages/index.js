@@ -3,7 +3,7 @@ import styled from 'styled-components'
 import dbConnect from 'services/dbConnect'
 import Tag from 'models/Tag'
 
-import Tags from 'components/Tags'
+import Tags from 'components/TagsCarousel'
 import ContactButtons from 'components/ContactButtons'
 
 function Home({ tags }) {
@@ -29,7 +29,7 @@ function Home({ tags }) {
 export async function getStaticProps() {
   await dbConnect()
   const tags = await Tag.find({}, { _id: 0 }).lean()
-
+  
   return {
     props: {
       tags
