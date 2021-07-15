@@ -1,14 +1,22 @@
+import Head from 'next/head'
 import dbConnect from 'services/dbConnect'
 import Post from 'models/Post'
 import Tag from 'models/Tag'
 import Image from 'components/Image'
 
 function TagPage({ tag, posts }) {
-  return <Image
-    src={tag.image_path}
-    width={100}
-    height={100}
-  />
+  return <>
+    <Head>
+      <title>{tag.name} - Paulo Cerqueira</title>
+      <meta name="description" content={`Artigos sobre ${tag.name}.`} />
+    </Head>
+
+    <Image
+      src={tag.image_path}
+      width={100}
+      height={100}
+    />
+  </>
 }
 
 export async function getStaticProps({ params }) {
